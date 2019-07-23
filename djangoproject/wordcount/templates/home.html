@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+<div class="container">
+<h1>안녕하세요, 워드 카운터입니다.</h1>
+
+<button type="button" class="btn btn-info" onclick = "location.href = '{%url 'about'%}'">프로그램 설명</button>
+
+<form action = "{%url 'result'%}">
+    <h3>본문을 적으세요.</h3>
+    <textarea class="form-control" cols = "50" rows = "20" placeholder="Your Text" name = "fulltext"></textarea>
+    <br>
+    <h3>원하는 단어(어절)을 적으세요</h3>
+    <input type="text" class="form-control"  placeholder="What You Want?" name="wantword">
+    <br>
+    <br>
+    <input type = "submit" value = "글자수 세기">
+</form>
+</div>

@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<div class="container">
+<h1>단어(어절) 총 {{total_words}}개로 구성되어 있습니다.</h1>
+
+<a href = "{%url 'home'%}">다시하기</a>
+
+<br>
+
+<h2>입력한 텍스트 : </h2>
+{{full}}
+
+<h2>당신이 원하는 단어(어절)의 개수 : </h2>
+{{want_text}} : {{you_want}}
+
+<br>
+
+<h2>단어(어절) 개수 : </h2>
+{%for word, howmany in dic_words%}
+
+{{word}} : {{howmany}}
+
+<br>
+
+{%endfor%}
+</div>
